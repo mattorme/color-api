@@ -11,7 +11,9 @@ app.use(bodyParser.json())
 app.use(express.static('client'))
 
 
-// get all colors
+// before using please set up your db and then run seed-colors-and-paletts.js 
+
+// get all colors --- FOR TESTING ---
 app.get('/api/colors', (req, res) => {
     pool.query('select * from colors;', [], (err, db) => {
         res.json({message: "ok", data: db.rows})
@@ -26,17 +28,6 @@ app.get('/api/palettes', (req, res) => {
 
     })
 })
-
-// get palette 
-// app.get('/api/palettes/:user_id', (req, res) => {
-//     const sql = `select * from palettes where user_id = ${
-//         req.params.user_id
-//     };`
-//     pool.query(sql, [], (err, db) => {
-//         res.json({message: "ok", data: db.rows})
-
-//     })
-// })
 
 
 // get favourite palettes by user id

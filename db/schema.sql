@@ -8,6 +8,7 @@ CREATE TABLE users (
     api_key TEXT
 );
 
+-- have not yet added names to palettes
 CREATE TABLE palettes (
     id SERIAL PRIMARY KEY,
     primary_color_hex TEXT,
