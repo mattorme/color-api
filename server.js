@@ -28,7 +28,7 @@ app.get('/api/palettes', (req, res) => {
 })
 
 app.get('/api/palettes/:user/favourites', (req, res) => {
-    res.send("nice")
+    res.send("palettes by user")
 })
 
 app.post('/api/palettes', (req, res) => {
