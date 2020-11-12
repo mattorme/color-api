@@ -1,0 +1,82 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+body {
+    margin: 80px 300px;
+    background-color: rgb(249, 250, 252);
+}
+
+h1 {
+    color: rgb(39, 35, 35);
+    font-size: 3rem;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+h3 {
+    font-size: 2rem;
+    color: rgb(140,147,156);
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+.main-pic {
+    width: 850px;
+    height: 500px;
+    border: 1px solid rgb(145, 149, 155);
+    border-radius: 10px;
+    margin: 0 auto;
+    transition: all ease-in 400ms;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(15, 119, 223);
+    border: 2px solid rgb(54, 150, 249);
+    border-radius: 20px;
+    box-shadow: 3px 5px rgb(54, 150, 249);
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 20px;
+    width: 500px;
+}
+
+a:focus {
+    box-shadow: none;
+    transform: translateY(3px);
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.features-grid img {
+    width: 40px;
+    height: 40px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    text-align: center;
+    margin: 60px;
+}
+
+.features-grid p {
+    color: rgb(140,147,156)
+}
+
+.features-grid .div {
+    padding: 100px;
+}
+
+
+
+
