@@ -1,6 +1,7 @@
+
 var colors = require ('./colors-list');
 const {Pool} = require('pg')
-const pool = new Pool({database: 'colors_api', password: 'password'})
+const pool = new Pool({database: 'colors_api', password: 'password'}
 
 
 colors = colors.split('\n')
