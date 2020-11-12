@@ -23,3 +23,9 @@ CREATE TABLE favourites (
     palette_id INTEGER,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+CREATE TABLE colors (
+    id SERIAL PRIMARY KEY,
+    color_name TEXT,
+    color_hex TEXT
+);

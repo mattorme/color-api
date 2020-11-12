@@ -10,8 +10,14 @@ const pool = new Pool({database: 'colors_api', password: 'password'})
 app.use(bodyParser.json())
 app.use(express.static('client'))
 
-app.get('/', (req, res) => {
-    pool.query('select * from users;', [], (err, db) => {
+app.get('/api/colors', (req, res) => {
+    pool.query('select * from colors;', [], (err, db) => {
+        res.json({message: "ok", data: db.rows})
+
+    })
+})
+app.get('/api/palettes', (req, res) => {
+    pool.query('select * from palettes;', [], (err, db) => {
         res.json({message: "ok", data: db.rows})
 
     })
