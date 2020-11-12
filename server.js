@@ -38,6 +38,8 @@ app.get('/api/favourites/:user_id', (req, res) => {
         req.params.user_id
     };`
     pool.query(sql, [], (err, db) => {
+app.get('/', (req, res) => {
+    pool.query('select * from users;', [], (err, db) => {
         res.json({message: "ok", data: db.rows})
 
     })
@@ -93,3 +95,19 @@ app.post('/api/favourites', (req, res) => {
 app.listen(port, () => {
     console.log(`listening from port ${port}`)
 });
+//router to create a user
+app.post('/users', async(req, res) => {
+    bcrypt.hash(String(req.body.password), saltRounds, function(err, hash) {
+        console.log(err)
+        console.log(hash)
+        pool.query('INSERT INTO users( email, password ) VALUES ($1, $2);', [req.body.email, hash], (err, db) => {
+            res.json({message: "ok"})
+        } )
+    });
+})
+
+
+//router to login a user
+app.post('/login', (req, res) => {
+    console.log(req.body)
+})
