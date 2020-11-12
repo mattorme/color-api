@@ -1104,16 +1104,37 @@ gray 5	 	gray 5	#0D0D0D	13	13	13	855309
 gray 4	 	gray 4	#0A0A0A	10	10	10	657930
 gray 3	 	gray 3	#080808	8	8	8	526344
 gray 2	 	gray 2	#050505	5	5	5	328965
-gray 1	 	gray 1	#030303	3	3	3	197379` 
+gray 1	 	gray 1	#030303	3	3	3	197379`
 
 const {Pool} = require('pg')
 const pool = new Pool({database: 'colors_api', password: 'password'})
 
 colors = colors.split('\n')
-colors.forEach( item => { 
+var pallete = []
+
+colors.forEach(item => {
     item = item.split("\t")
-    // console.log(`name ${item[0]}, hex: ${item[3]}`)
-    pool.query(`insert into colors (color_name, color_hex) values ('${item[0]}', '${item[3]}');`)
+    pallete.push(item[3])
+    if (pallete.length == 5) {
+        pool.query(`insert into palettes (primary_color_hex, secondary_color_hex, tertiary_color_hex, quaternary_color_hex, quinary_color_hex) values ('${
+            pallete[0]
+        }', '${
+            pallete[1]
+        }','${
+            pallete[2]
+        }', '${
+            pallete[3]
+        }','${
+            pallete[4]
+        }');`)
+        pallete = []
+    }
+    
+    pool.query(`insert into colors (color_name, color_hex) values ('${
+        item[0]
+    }', '${
+        item[3]
+    }');`)
+
+
 });
-
-
