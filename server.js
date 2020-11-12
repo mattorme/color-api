@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 app.use(express.static('client'))
 
 
-// get all colors
+// get all colors --- FOR TESTING ONLY ---
 app.get('/api/colors', (req, res) => {
     pool.query('select * from colors;', [], (err, db) => {
         res.json({message: "ok", data: db.rows})
@@ -26,18 +26,6 @@ app.get('/api/palettes', (req, res) => {
 
     })
 })
-
-// get palette 
-// app.get('/api/palettes/:user_id', (req, res) => {
-//     const sql = `select * from palettes where user_id = ${
-//         req.params.user_id
-//     };`
-//     pool.query(sql, [], (err, db) => {
-//         res.json({message: "ok", data: db.rows})
-
-//     })
-// })
-
 
 // get favourite palettes by user id
 app.get('/api/favourites/:user_id', (req, res) => {

@@ -2,7 +2,7 @@ var colors = require ('./colors-list');
 const {Pool} = require('pg')
 const pool = new Pool({database: 'colors_api', password: 'password'})
 
-// console.log(colors)
+
 colors = colors.split('\n')
 var pallete = []
 
