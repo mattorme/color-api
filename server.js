@@ -1,10 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser')
-
+const session = require('express-session');
 const app = express();
-const port = 8080;
-const { Pool } = require('pg')
-const pool = new Pool({ database: 'colors_api', password: 'password' })
+const userController = require('./controllers/userController')
+const port = process.env.PORT || 8080;
 
 
 app.use(session({
@@ -12,17 +11,6 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }))
-
-const checkSession = (req, res, next) => {
-    // console.log(req.session)
-    // console.log(req.sessionID)
-    if (req.session.loggedIn) {
-        next()
-    } else {
-        return res.json({ message: "Not logged in", loggedIn: false })
-    }
-}
-
 
 app.use(bodyParser.json())
 app.use(express.static('client'))
@@ -147,3 +135,7 @@ app.post('/login', (req, res) => {
         });
     })
 })
+app.get('/', userController.checkSession, userController.allUsers)
+app.post('/users', userController.createUser )
+app.post('/login', userController.loginUser )
+app.get('/logout', userController.checkSession, userController.logoutUser )

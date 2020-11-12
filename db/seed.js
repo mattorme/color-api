@@ -12,6 +12,18 @@ let users = [
         email: "ned@mail.com",
         password: "1234"
     },
+    {
+        email: "matt@mail.com",
+        password: "1234"
+    },
+    {
+        email: "jian@mail.com",
+        password: "1234"
+    },
+    {
+        email: "naveen@mail.com",
+        password: "1234"
+    },
 ]
 
 console.log("Starting")
@@ -23,4 +35,4 @@ users.forEach(user => {
     });
 })
 
-console.log("Seeeded")
+console.log("Seeded")
