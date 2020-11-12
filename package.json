@@ -1,25 +1,30 @@
 {
-    "name": "color-api",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon server.js",
-        "start": "node server.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/StephenDeVaux/color-api.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/StephenDeVaux/color-api/issues"
-    },
-    "homepage": "https://github.com/StephenDeVaux/color-api#readme",
-    "devDependencies": {
-        "nodemon": "^2.0.6"
-    }
+  "name": "color-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephenDeVaux/color-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StephenDeVaux/color-api/issues"
+  },
+  "homepage": "https://github.com/StephenDeVaux/color-api#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pg": "^8.5.0"
+  }
 }
