@@ -14,13 +14,12 @@ CREATE TABLE palettes (
     secondary_color_hex TEXT,
     tertiary_color_hex TEXT,
     quaternary_color_hex TEXT,
-    quinary_color_hex TEXT,
-    user_id INTEGER,
-    FOREIGN KEY (user_id) REFERENCES users(id)
+    quinary_color_hex TEXT
 );
 
 CREATE TABLE favourites (
     id SERIAL PRIMARY KEY,
     user_id INTEGER,
-    palette_id INTEGER
+    palette_id INTEGER,
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
