@@ -20,7 +20,7 @@ console.log("Starting")
 
 users.forEach(user => {
     bcrypt.hash(String(user.password), saltRounds, function(err, hash) {
-        pool.query('INSERT INTO users( email, password ) VALUES ($1, $2);', [user.email, hash], (err, db) => {
+        pool.query('INSERT INTO users( email, password_hash ) VALUES ($1, $2);', [user.email, hash], (err, db) => {
         } )
     });
 })

@@ -10,7 +10,7 @@ CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     name TEXT,
     email TEXT,
-    password TEXT,
+    password_hash TEXT,
     api_key TEXT
 );
 
