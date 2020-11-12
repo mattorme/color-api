@@ -23,6 +23,23 @@ app.get('/api/palettes', (req, res) => {
     })
 })
 
+app.post('/api/palettes', (req, res) => {
+    const sql = 'INSERT INTO palettes (primary_color_hex, secondary_color_hex, tertiary_color_hex, quaternary_color_hex, quinary_color_hex) values ($1, $2, $3, $4, $5);'
+    console.log(req.body.primary_color_hex)
+    // console.log(sql)
+    pool.query(sql, [req.body.primary_color_hex, req.body.secondary_color_hex, req.body.tertiary_color_hex, req.body.quaternary_color_hex, req.body.quinary_color_hex], (err, db) => {
+        if (err) {
+            res.json({
+                message: 'invalid request'
+            }, 400)
+        } else {
+            res.json({
+                message: 'palette created'
+            }, 201)
+        }
+    })
+})
+
 app.listen(port, () => {
     console.log(`listening from port ${port}`)
 });
