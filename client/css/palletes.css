@@ -138,7 +138,7 @@
   padding-top: 42px;
   margin-right: 75px;
   padding-left: 20px;
-  animation: showExportOptions 0.5s ease-out;
+  animation: showExportOptions 0.35s ease-out;
   transform: opacity;
 }
 
