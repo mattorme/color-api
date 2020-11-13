@@ -1,10 +1,16 @@
-create database colors_api;
+CREATE DATABASE colors_api;
+
+\c colors_api;
+
+DROP TABLE IF EXISTS favourites;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS palettes;
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     name TEXT,
     email TEXT,
-    password TEXT,
+    password_hash TEXT,
     api_key TEXT
 );
 

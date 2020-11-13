@@ -1,11 +1,18 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 
+const session = require('express-session');
 const app = express();
-const port = 8080;
-const {Pool} = require('pg')
-const pool = new Pool({database: 'colors_api', password: 'password'})
+const userController = require('./controllers/userController')
+const port = process.env.PORT || 8080;
+const { Pool } = require('pg')
+const pool = new Pool({ database: 'colors_api', password: 'password' })
 
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true
+}))
 
 app.use(bodyParser.json())
 app.use(express.static('client'))
@@ -32,14 +39,11 @@ app.get('/api/palettes', (req, res) => {
 })
 
 
-// get favourite palettes by user id
+// // get favourite palettes by user id
 app.get('/api/favourites/:user_id', (req, res) => {
-    const sql = `select * from favourites where user_id = ${
-        req.params.user_id
-    };`
+    const sql = `select * from favourites where user_id = ${req.params.user_id};`
     pool.query(sql, [], (err, db) => {
         res.json({message: "ok", data: db.rows})
-
     })
 })
 
@@ -93,3 +97,8 @@ app.post('/api/favourites', (req, res) => {
 app.listen(port, () => {
     console.log(`listening from port ${port}`)
 });
+
+app.get('/users/all', userController.checkSession, userController.allUsers) //No purpose just for testing really
+app.post('/users', userController.createUser )
+app.post('/login', userController.loginUser )
+app.get('/logout', userController.checkSession, userController.logoutUser )
