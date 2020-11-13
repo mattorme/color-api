@@ -2,19 +2,16 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const expressLayouts = require('express-ejs-layouts');
 
-const session = require('express-session');
+const session = require("express-session");
 const app = express();
 const userController = require('./controllers/userController');
 const paletteController = require('./controllers/paletteController');
 const port = process.env.PORT || 8080;
-const { Pool } = require('pg')
-const pool = new Pool({ database: 'colors_api', password: 'password' })
+const { Pool } = require("pg");
+const pool = new Pool({ database: "colors_api", password: "password" });
 
-app.use(session({
-    secret: 'keyboard cat',
-    resave: false,
-    saveUninitialized: true
-}))
+app.set("views", "./client");
+app.set("view engine", "ejs");
 
 app.use(bodyParser.json())
 app.use(express.static('client'))
