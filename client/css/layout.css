@@ -1,10 +1,16 @@
 /* universal */
 :root {
-  --primary-color: #97f9f9ff;
+  /* --primary-color: #97f9f9ff;
   --secondary-color: #c59fc9ff;
   --tertiary-color: #a4def9ff;
   --quaternary-color: #c1e0f7ff;
-  --quinary-color: #cfbae1ff;
+  --quinary-color: #cfbae1ff; */
+  --primary-color: #52489cff;
+  --secondary-color: #4062bbff;
+  --tertiary-color: #59c3c3ff;
+  --white: #ebebebff;
+  --quinary-color: #f45b69ff;
+}
 }
 
 * {
