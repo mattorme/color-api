@@ -17,7 +17,24 @@ app.use(session({
 app.use(bodyParser.json())
 app.use(express.static('client'))
 
+/*********** EJS *********/ 
+app.set('views', './views')
+app.set('view engine', 'ejs')
 
+/*********** Home page *********/ 
+app.get('/', (req, res) => {
+    res.render('home') 
+})
+
+/*********** Login page *********/ 
+app.get('/colors/login', (req, res) => {
+    res.render('colors_login') 
+})
+
+/*********** Colors selection page *********/ 
+app.get('/colors/:id', (req, res) => {
+    res.render('colors_selection') 
+})
 
 // get all colors --- FOR TESTING ONLY ---
 

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/export.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"/>
+</head>
+<body>
+    <div>
+        <button class="login-page-btn generate-btn">Generate</button>
+    </div>
+    
+    <main class="login-page-grid">
+        
+        <section class="outer-color-container">
+            <section class="primary-color-container colors">
+                <div class="color-picker-background">
+                    <div class="primary-color-picker color-picker"></div>
+                    <span class="color-picker-hex primary-hex"></span>
+                </div>
+            </section>
+            <section class="secondary-color-container colors">
+                <div class="color-picker-background">
+                    <div class="secondary-color-picker"></div>
+                    <span class="color-picker-hex secondary-hex"></span>
+                </div>
+            </section>
+            <section class="tertiary-color-container colors">
+                <div class="color-picker-background">
+                    <div class="tertiary-color-picker"></div>
+                    <span class="color-picker-hex tertiary-hex"></span>
+                </div>        
+            </section>
+            <section class="quaternary-color-container colors">
+                <div class="color-picker-background">    
+                    <div class="quaternary-color-picker"></div>
+                    <span class="color-picker-hex quaternary-hex"></span>
+                </div>    
+            </section>
+            <section class="quinary-color-container colors">
+                <div class="color-picker-background">    
+                    <div class="quinary-color-picker"></div>
+                    <span class="color-picker-hex quinary-hex"></span>
+                </div>
+            </section>
+        </section>
+​
+        <section class="login-container">
+            <div class="side-bar">
+                <img class="save-btn" src="https://www.flaticon.com/svg/static/icons/svg/2983/2983818.svg" alt="">
+                <img class="fav-btn" src="https://www.flaticon.com/svg/static/icons/svg/446/446072.svg" alt="">
+                <img class="export-btn" src="https://www.flaticon.com/svg/static/icons/svg/3388/3388674.svg" alt="">
+            </div>
+        </section>  
+​
+        <!-- Export Modal -->
+        <div id="exportModal" class="export-modal">
+            <!-- Modal content -->
+            <div class="export-modal-content">
+                <span class="close">&times;</span>
+                <p>Export Palette</p>
+                <hr>
+                <div class="export-grid">
+                    <div class="css-export-btn">
+                        <img src="https://www.flaticon.com/svg/static/icons/svg/266/266167.svg" alt=""> <p>CSS</p>
+                    </div>
+                    <div class="api-export-btn">
+                        <img src="https://www.flaticon.com/svg/static/icons/svg/681/681452.svg" alt=""> <p>API</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+​
+        <!-- css modal -->
+        <div id="cssModal" class="css-modal">
+            <div class="css-modal-content">
+                <span class="close">&times;</span>
+                <p>CSS</p>
+                <hr>
+                <textarea class="css-textarea">
+                    *CSS TEXT HERE*
+                </textarea>
+                <hr>
+                <div class="copy-btn"><p>Copy</p></div>
+            </div>
+        </div> 
+​
+        <!-- api modal -->
+        <div id="apiModal" class="api-modal">
+            <div class="api-modal-content">
+                <span class="close">&times;</span>
+                <p>API</p>
+                <hr>
+                <textarea class="api-textarea">
+                    *API text area*
+                </textarea>
+                <hr>
+                <div class="copy-btn"><p>Copy</p></div>
+            </div>
+        </div>
+​
+    </main> 
+​
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/export.js"></script>
+</body>
+</html>
