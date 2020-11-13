@@ -31,7 +31,7 @@ h4 {
     border: 1px solid rgb(214, 222, 233);
     border-radius: 10px;
     margin: 0 auto;
-    transition: all ease-in 400ms;
+    transition: ease-in 400ms;
 }
 
 a {
