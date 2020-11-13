@@ -50,7 +50,7 @@ app.get('/api/favourites/:user_id', (req, res) => {
 
 // create a palette
 app.post('/api/palettes', (req, res) => {
-    const sql = 'INSERT INTO palettes (primary_color_hex, secondary_color_hex, tertiary_color_hex, quaternary_color_hex, quinary_color_hex, user_id) values ($1, $2, $3, $4, $5, $6);'
+    const sql = 'INSERT INTO palettes (primary_color_hex, secondary_color_hex, tertiary_color_hex, quaternary_color_hex, quinary_color_hex) values ($1, $2, $3, $4, $5);'
     console.log(req.body.primary_color_hex)
     // console.log(sql)
     pool.query(sql, [
@@ -59,7 +59,6 @@ app.post('/api/palettes', (req, res) => {
         req.body.tertiary_color_hex,
         req.body.quaternary_color_hex,
         req.body.quinary_color_hex,
-        req.body.user_id
     ], (err, db) => {
         if (err) {
             res.json({
@@ -94,11 +93,11 @@ app.post('/api/favourites', (req, res) => {
 })
 
 
-app.listen(port, () => {
-    console.log(`listening from port ${port}`)
-});
-
 app.get('/users/all', userController.checkSession, userController.allUsers) //No purpose just for testing really
 app.post('/users', userController.createUser )
 app.post('/login', userController.loginUser )
 app.get('/logout', userController.checkSession, userController.logoutUser )
+
+app.listen(port, () => {
+    console.log(`listening from port ${port}`)
+});
