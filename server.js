@@ -15,6 +15,7 @@ app.use(session({
 app.use(bodyParser.json())
 app.use(express.static('client'))
 
+<<<<<<< HEAD
 
 
 // get all colors --- FOR TESTING ONLY ---
@@ -136,6 +137,9 @@ app.post('/login', (req, res) => {
     })
 })
 app.get('/', userController.checkSession, userController.allUsers)
+=======
+app.get('/users/all', userController.checkSession, userController.allUsers) //No purpose just for testing really
+>>>>>>> 4bfea53 (created utils)
 app.post('/users', userController.createUser )
 app.post('/login', userController.loginUser )
 app.get('/logout', userController.checkSession, userController.logoutUser )
