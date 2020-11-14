@@ -7,14 +7,14 @@
 
 .home-body {
     background-color: white;
-    margin: 80px 15%;
+    margin: 0px 15%;
 }
 
 .home-body h1 {
     color: rgb(39, 35, 35);
     font-size: 3rem;
     font-family: 'Julius Sans One', sans-serif;
-    margin: 30px;
+    margin: 40px;
 }
 
 .home-body h3 {
