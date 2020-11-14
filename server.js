@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser')
+const expressLayouts = require('express-ejs-layouts');
 
 const session = require('express-session');
 const app = express();
@@ -17,14 +18,16 @@ app.use(session({
 
 app.use(bodyParser.json())
 app.use(express.static('client'))
+app.use(expressLayouts)
 
 /*********** EJS *********/ 
 app.set('views', './views')
 app.set('view engine', 'ejs')
+// app.set('layout','layout')
 
 /*********** Home page *********/ 
 app.get('/', (req, res) => {
-    res.render('home') 
+    res.render('home', {layout: 'layout'}) 
 })
 
 /*********** Login page *********/ 

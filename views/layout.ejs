@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="../client/css/layout.css" /> -->
+    <title>Document</title>
+    <style>
+        /* universal */
+:root {
+  /* --primary-color: #97f9f9ff;
+  --secondary-color: #c59fc9ff;
+  --tertiary-color: #a4def9ff;
+  --quaternary-color: #c1e0f7ff;
+  --quinary-color: #cfbae1ff; */
+  --primary-color: #52489cff;
+  --secondary-color: #4062bbff;
+  --tertiary-color: #59c3c3ff;
+  --white: #ebebebff;
+  --quinary-color: #f45b69ff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Layout */
+
+/* Navigation */
+.nav-bar {
+  background-color: var(--secondary-color);
+}
+
+.logo {
+  margin: 15px 750px 10px 0;
+  padding-left: 50px;
+  font-size: 30px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav-bar-item {
+  list-style: none;
+  margin: 20px 100px 20px 0;
+  font-size: 30px;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Footer */
+.footer-layout {
+  width: 35%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.footer-p {
+  text-align: center;
+  color: var(--quinary-color);
+}
+
+    </style>
+
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+        <ul>
+          <h1 class="logo"><a href="/">Placeholder</a></h1>
+          <li class="nav-bar-item"><a href="#">Saved Palletes</a></li>
+          <li class="nav-bar-item"><a href="#">Docs / API</a></li>
+          <li class="nav-bar-item"><a href="#">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- CODE HERE -->
+    <div><%- body %></div>
+
+    <footer class="footer-layout">
+      <p class="footer-p">
+        Created by Naveen, Matt, Stephen, Jian & Ned as part of a General
+        Assembly Software Engineering Software Immersive course.
+      </p>
+    </footer>
+  </body>
+</html>
