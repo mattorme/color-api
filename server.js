@@ -27,8 +27,9 @@ app.set('view engine', 'ejs')
 
 /*********** Home page *********/ 
 app.get('/', (req, res) => {
-    res.render('home', {layout: 'layout'}) 
+    res.render('home') 
 })
+// , {layout: 'layout'}
 
 /*********** Login page *********/ 
 app.get('/colors/login', (req, res) => {

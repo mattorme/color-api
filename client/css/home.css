@@ -1,24 +1,26 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 
-.home-body body {
-    margin: 80px 300px;
-    background-color: rgb(249, 250, 252);
+.home-body {
+    background-color: white;
+    margin: 80px 15%;
 }
 
 .home-body h1 {
     color: rgb(39, 35, 35);
     font-size: 3rem;
     font-family: 'Julius Sans One', sans-serif;
+    margin: 30px;
 }
 
 .home-body h3 {
     font-size: 2rem;
     color: rgb(140,147,156);
+    margin: 30px;
 }
 
 .home-body h4 {
@@ -30,7 +32,7 @@
     height: 500px;
     border: 1px solid rgb(214, 222, 233);
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 30px auto 20px;
     transition: ease-in 400ms;
 }
 
@@ -41,7 +43,7 @@
     border-radius: 20px;
     box-shadow: 3px 5px rgb(54, 150, 249);
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
     padding: 10px;
     font-size: 20px;
     width: 500px;
