@@ -14,3 +14,25 @@
   float: left;
   margin-left: 25%;
 }
+/* .export-img {
+  width: 100px;
+  float: left;
+  margin-left: 25%;
+  padding-top: 100vw;
+}
+.heart-img {
+  width: 100px;
+  float: left;
+  margin-left: 25%;
+} */
+
+.fa-file-export {
+  float: left;
+  margin-left: 25%;
+  padding-top: 100vw;
+}
+
+.fa-save {
+  float: left;
+  margin-left: 25%;
+}

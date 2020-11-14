@@ -5,23 +5,23 @@
     text-align: center;
 }
 
-body {
+.home-body body {
     margin: 80px 300px;
     background-color: rgb(249, 250, 252);
 }
 
-h1 {
+.home-body h1 {
     color: rgb(39, 35, 35);
     font-size: 3rem;
     font-family: 'Julius Sans One', sans-serif;
 }
 
-h3 {
+.home-body h3 {
     font-size: 2rem;
     color: rgb(140,147,156);
 }
 
-h4 {
+.home-body h4 {
     font-size: 1.3rem;
 }
 
@@ -31,10 +31,10 @@ h4 {
     border: 1px solid rgb(214, 222, 233);
     border-radius: 10px;
     margin: 0 auto;
-    transition: all ease-in 400ms;
+    transition: ease-in 400ms;
 }
 
-a {
+.home-body a {
     text-decoration: none;
     color: rgb(15, 119, 223);
     border: 2px solid rgb(54, 150, 249);
@@ -47,12 +47,12 @@ a {
     width: 500px;
 }
 
-a:focus {
+.home-body a:focus {
     box-shadow: none;
     transform: translateY(3px);
 }
 
-a:hover {
+.home-body a:hover {
     cursor: pointer;
 }
 
