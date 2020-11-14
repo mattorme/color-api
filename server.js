@@ -35,6 +35,10 @@ app.get('/colors/login', (req, res) => {
     res.render('colors_login') 
 })
 
+app.get('/signup', (req, res) => {
+    res.render('colors_signup') 
+})
+
 /*********** Colors selection page *********/ 
 app.get('/colors/:id', (req, res) => {
     res.render('colors_selection') 

@@ -8,7 +8,10 @@ const saltRounds = 10;
 module.exports = {
     createUser: async (req, res) => {
         bcrypt.hash(String(req.body.password), saltRounds, function (err, hash) {
-            pool.query('INSERT INTO users( email, password_hash ) VALUES ($1, $2);', [req.body.email, hash], (err, db) => {
+            pool.query('INSERT INTO users( email, password_hash, name ) VALUES ($1, $2, $3);', [req.body.email, hash, req.body.name], (err, db) => {
+                if (err) {
+                    return res.json({ message: "error", err })
+                }
                 res.json({ message: "ok" })
             })
         });
