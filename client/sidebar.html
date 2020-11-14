@@ -11,13 +11,44 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="side-bar-container">
-      <div class="side-bar">
-        <i class="fa fa-save fa-5x"></i>
-        <i class="fa fa-heart fa-5x"></i>
+    <div class="container darken">
+      <i class="fas fa-file-export"></i>
+      <div class="side-bar-container">
+        <div class="side-bar">
+          <i class="fa fa-save fa-5x"></i>
+
+          <i class="fa fa-heart fa-5x"></i>
+          <img class="export" src="./img/export.png" alt="" />
+        </div>
+      </div>
+      <div id="cssModal" class="css-modal">
+        <div class="css-modal-content">
+          <span class="close">&times;</span>
+          <p>CSS</p>
+          <hr />
+          <textarea class="css-textarea">
+              *CSS TEXT HERE*
+          </textarea>
+          <hr />
+          <div class="copy-btn"><p>Copy</p></div>
+        </div>
+      </div>
+      ​
+      <!-- api modal -->
+      <div id="apiModal" class="api-modal">
+        <div class="api-modal-content">
+          <span class="close">&times;</span>
+          <p>API</p>
+          <hr />
+          <textarea class="api-textarea">
+              *API text area*
+          </textarea>
+          <hr />
+          <div class="copy-btn"><p>Copy</p></div>
+        </div>
       </div>
     </div>
-
     <script src="https://use.fontawesome.com/30d51338cd.js"></script>
+    <script src="./js/sidebar.js"></script>
   </body>
 </html>
