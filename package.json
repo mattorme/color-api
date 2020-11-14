@@ -1,35 +1,36 @@
 {
-    "name": "color-api",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon server.js",
-        "start": "node server.js",
-        "setup": "psql -d colors_api < ./db/schema.sql",
-        "seed": "node ./db/seed.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/StephenDeVaux/color-api.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/StephenDeVaux/color-api/issues"
-    },
-    "homepage": "https://github.com/StephenDeVaux/color-api#readme",
-    "devDependencies": {
-        "nodemon": "^2.0.6"
-    },
-    "dependencies": {
-        "bcrypt": "^5.0.0",
-        "body-parser": "^1.19.0",
-        "ejs": "^3.1.5",
-        "express": "^4.17.1",
-        "express-session": "^1.17.1",
-        "pg": "^8.5.0"
-    }
+  "name": "color-api",
+  "version": "1.0.0",
+  "description": "To setup database schema  - 1 - As a once off, make an psql database called colors_api - 2 - run \"npm run setup\" this will drop all tables you might have and recreatee new ones - 3 - run \"npm run seed\" this will seed your database with fresh data",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "setup": "psql -d colors_api < ./db/schema.sql",
+    "seed": "node ./db/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephenDeVaux/color-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StephenDeVaux/color-api/issues"
+  },
+  "homepage": "https://github.com/StephenDeVaux/color-api#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "pg": "^8.5.0"
+  }
 }
