@@ -50,6 +50,11 @@ app.get('/palettes', (req, res) => {
     res.render('palletes') 
 })
 
+/*********** Docs/API page *********/ 
+app.get('/api-access', (req, res) => {
+    res.render('docs_api') 
+})
+
 // get all colors --- FOR TESTING ONLY ---
 // before using please run "npm run setup" and "npm run seed"
 app.get('/api/colors', paletteController.colors)
