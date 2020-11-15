@@ -7,26 +7,31 @@ const apiKeyGenerator = require("../utils/apikeygenerator")
 
 let users = [
     {
+        id: 1,
         name: "stephen",
         email: "steve@mail.com",
         password: "1234"
     },
     {
+        id: 2,
         name: "nedward",
         email: "ned@mail.com",
         password: "1234"
     },
     {
+        id: 3,
         name: "matty",
         email: "matt@mail.com",
         password: "1234"
     },
     {
+        id: 4,
         name: "Jian",
         email: "jian@mail.com",
         password: "1234"
     },
     {
+        id: 5,
         name: "Naveenc",
         email: "naveen@mail.com",
         password: "1234"
@@ -39,8 +44,13 @@ users.forEach(user => {
 
     bcrypt.hash(String(user.password), saltRounds, function (err, hash) {
         let sql = 'INSERT INTO users( email, password_hash, name, api_key ) VALUES ($1, $2, $3, $4);'
-        pool.query(sql, [user.email, hash, user.name, apiKeyGenerator()], (err, db) => { })
+        pool.query(sql, [user.email, hash, user.name, apiKeyGenerator()], (err, db) => {
+            pool.query('INSERT INTO favourites (user_id, palette_id) VALUES ($1, $2)', [user.id, Math.floor(Math.random() * 50)]);
+            pool.query('INSERT INTO favourites (user_id, palette_id) VALUES ($1, $2)', [user.id, Math.floor(Math.random() * 50)]);
+            pool.query('INSERT INTO favourites (user_id, palette_id) VALUES ($1, $2)', [user.id, Math.floor(Math.random() * 50)]);
+         })
     })
+    
 })
 
 
@@ -66,7 +76,5 @@ colors.forEach(item => {
 
 
 });
-
-
 
 console.log("Seeded")

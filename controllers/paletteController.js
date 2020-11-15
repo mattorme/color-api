@@ -1,23 +1,23 @@
 const { Pool } = require('pg')
 const pool = new Pool({ database: 'colors_api', password: 'password' })
 
-module.exports = { 
+module.exports = {
     colors: (req, res) => {
         pool.query('select * from colors;', [], (err, db) => {
-            res.json({message: "ok", data: db.rows})
-    
+            res.json({ message: "ok", data: db.rows })
+
         })
     },
     palettes: (req, res) => {
         pool.query('select * from palettes;', [], (err, db) => {
-            res.json({message: "ok", data: db.rows})
-    
+            res.json({ message: "ok", data: db.rows })
+
         })
     },
     paletteByUser: (req, res) => {
         const sql = `select * from favourites where user_id = ${req.params.user_id};`
         pool.query(sql, [], (err, db) => {
-            res.json({message: "ok", data: db.rows})
+            res.json({ message: "ok", data: db.rows })
         })
     },
     createPalette: (req, res) => {
@@ -59,5 +59,11 @@ module.exports = {
                 }, 201)
             }
         })
-    }
+    },
+    userPaletteWithColors: (req, res) => {
+        let sql = 'SELECT favourites.palette_id, palettes.primary_color_hex, palettes.secondary_color_hex, palettes.tertiary_color_hex , palettes.quaternary_color_hex , palettes.quinary_color_hex  FROM favourites INNER JOIN palettes ON favourites.palette_id=palettes.id WHERE favourites.user_id=$1;'
+        pool.query(sql, [req.params.user_id], (err, db) => {
+            res.json({ message: "ok", data: db.rows })
+        })
+    },
 }
