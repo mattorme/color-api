@@ -51,7 +51,7 @@
   margin-bottom: 50px;
   border-radius: 10px;
   border: 2px solid #cccccc;
-  background-color: white;
+  /* background-color: red; */
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
 }
