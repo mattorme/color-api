@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link
+      href="https://github.com/FortAwesome/Font-Awesome/blob/master/web-fonts-with-css/css/fontawesome.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container darken">
+      <i class="fas fa-file-export"></i>
+      <div class="side-bar-container">
+        <div class="side-bar">
+          <i class="fa fa-save fa-5x"></i>
+
+          <i class="fa fa-heart fa-5x"></i>
+          <img class="export" src="./img/export.png" alt="" />
+        </div>
+      </div>
+      <div id="cssModal" class="css-modal">
+        <div class="css-modal-content">
+          <span class="close">&times;</span>
+          <p>CSS</p>
+          <hr />
+          <textarea class="css-textarea">
+              *CSS TEXT HERE*
+          </textarea>
+          <hr />
+          <div class="copy-btn"><p>Copy</p></div>
+        </div>
+      </div>
+      ​
+      <!-- api modal -->
+      <div id="apiModal" class="api-modal">
+        <div class="api-modal-content">
+          <span class="close">&times;</span>
+          <p>API</p>
+          <hr />
+          <textarea class="api-textarea">
+              *API text area*
+          </textarea>
+          <hr />
+          <div class="copy-btn"><p>Copy</p></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://use.fontawesome.com/30d51338cd.js"></script>
+    <script src="./js/sidebar.js"></script>
+  </body>
+</html>
