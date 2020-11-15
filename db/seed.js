@@ -32,7 +32,7 @@ let users = [
     },
     {
         id: 5,
-        name: "Naveenc",
+        name: "Naveen",
         email: "naveen@mail.com",
         password: "1234"
     },
