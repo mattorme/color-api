@@ -4,11 +4,13 @@ const { Pool } = require('pg')
 const pool = new Pool({ database: 'colors_api', password: 'password' })
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+const apiKeyGenerator = require("../utils/apikeygenerator")
 
 module.exports = {
     createUser: async (req, res) => {
         bcrypt.hash(String(req.body.password), saltRounds, function (err, hash) {
-            pool.query('INSERT INTO users( email, password_hash, name ) VALUES ($1, $2, $3);', [req.body.email, hash, req.body.name], (err, db) => {
+            let sql = 'INSERT INTO users( email, password_hash, name, api_key ) VALUES ($1, $2, $3, $4);'
+            pool.query(sql, [req.body.email, hash, req.body.name, apiKeyGenerator()], (err, db) => {
                 if (err) {
                     return res.json({ message: "error", err })
                 }

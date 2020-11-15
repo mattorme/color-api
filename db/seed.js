@@ -3,25 +3,31 @@ var colors = require('./colors-list');
 const pool = new Pool({ database: 'colors_api', password: 'password' })
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+const apiKeyGenerator = require("../utils/apikeygenerator")
 
 let users = [
     {
+        name: "stephen",
         email: "steve@mail.com",
         password: "1234"
     },
     {
+        name: "nedward",
         email: "ned@mail.com",
         password: "1234"
     },
     {
+        name: "matty",
         email: "matt@mail.com",
         password: "1234"
     },
     {
+        name: "Jian",
         email: "jian@mail.com",
         password: "1234"
     },
     {
+        name: "Naveenc",
         email: "naveen@mail.com",
         password: "1234"
     },
@@ -30,10 +36,11 @@ let users = [
 console.log("Starting")
 
 users.forEach(user => {
+
     bcrypt.hash(String(user.password), saltRounds, function (err, hash) {
-        pool.query('INSERT INTO users( email, password_hash ) VALUES ($1, $2);', [user.email, hash], (err, db) => {
-        })
-    });
+        let sql = 'INSERT INTO users( email, password_hash, name, api_key ) VALUES ($1, $2, $3, $4);'
+        pool.query(sql, [user.email, hash, user.name, apiKeyGenerator()], (err, db) => { })
+    })
 })
 
 
