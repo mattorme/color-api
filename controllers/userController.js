@@ -46,12 +46,10 @@ module.exports = {
     logoutUser: (req, res) => {
         req.session.user = null
         req.session.loggedIn = false
-        res.json({ message: "Logged out" })
+        res.render('home', {session:  req.session}) 
     },
 
     checkSession: (req, res, next) => {
-        // console.log(req.session)
-        // console.log(req.sessionID)
         if (req.session.loggedIn) {
             next()
         } else {
