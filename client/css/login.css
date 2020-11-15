@@ -103,6 +103,18 @@ div {
     box-shadow: 0 10px 15px rgba(20,20,20,0.15);
 }
 
+.signup-btn {
+    float: left;
+    background: white;
+    color: #4bc2c9;
+    padding: 5px 45px;
+    margin: 0.5% 0% 0.5% 0.5%;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    box-shadow: 0 10px 15px rgba(20,20,20,0.15);
+}
+
 .login-page-body {
     background: white;
     color: white;

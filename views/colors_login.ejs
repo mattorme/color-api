@@ -50,7 +50,7 @@
         <section class="login-container">
             <div class="box">
                 <h1 class="login-page-title">Login</h1>
-                <p class="login-page-description">Placeholder description. Login to view/save your color palettes</p>
+                <p class="login-page-description">Login to view/save your color palettes</p>
                 <form action="" method="" class="login-form">
                     <div class="inputBox">
                         <input type="text" name="email" required="">
@@ -60,14 +60,40 @@
                         <input type="password" name="password" required="">
                         <label for="">Password</label>
                     </div>
-                    <input type="submit" name="" value="LOGIN" class="login-page-btn">  
+                    <input type="submit" name="" value="Log in" class="login-page-btn">  
                 </form>
+                <button class="signup-btn">Sign up</button>
             </div> 
+            
         </section>  
 
-    </main>
+        <section class="signup-container">
+            <div class="box">
+                <h1 class="login-page-title">Sign up</h1>
+                <p class="login-page-description">Signup to view/save your color palettes</p>
+                <form action="" method="" class="login-form">
+                    <div class="inputBox">
+                        <input type="text" name="name" required="" class="signup-name">
+                        <label for="">Name</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="email" required="" class="signup-email">
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" name="password" required="" class="signup-password">
+                        <label for="">Password</label>
+                    </div>
+                    <input type="submit" name="" value="SIGN UP" class="signup-page-btn">  
+                </form>
+                <p class="signup-msg"></p>
+            </div> 
+        </section> 
 
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
     <script src="/js/login.js"></script>
+    <script src="/js/auth_switch.js"></script>
 </body>
 </html>
