@@ -99,3 +99,13 @@
     <script src="/js/auth_switch.js"></script>
 </body>
 </html>
+
+<%- contentFor('navbarLogin') %>
+<% if(session.user){      %>
+<li class=""><%= session.user.name%></li>
+<li class="nav-bar-item"><a href="/palettes">>Saved</a></li>
+<li class="nav-bar-item"><a href="/logout">Logout</a></li>
+<% }else {  %>
+<li class="nav-bar-item"><a href="/colors/login">Login</a></li>
+<% }   %>
+

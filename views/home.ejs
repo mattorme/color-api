@@ -69,3 +69,14 @@
     <script src="/js/home.js"></script>
 </body>
 </html>
+
+
+<%- contentFor('navbarLogin') %>
+<% if(session.user){      %>
+<li class=""><%= session.user.name%></li>
+<%let url = `/colors/${session.user.id}` %>
+<li class="nav-bar-item"><a href=<%= url %>>Saved</a></li>
+<li class="nav-bar-item"><a href="/logout">Logout</a></li>
+<% }else {  %>
+<li class="nav-bar-item"><a href="/colors/login">Login</a></li>
+<% }   %>

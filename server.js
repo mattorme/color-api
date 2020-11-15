@@ -27,32 +27,34 @@ app.set('view engine', 'ejs')
 
 /*********** Home page *********/ 
 app.get('/', (req, res) => {
-    res.render('home') 
+    console.log(req.session)
+    res.render('home', {session:  req.session}) 
 })
 // , {layout: 'layout'}
 
 /*********** Login page *********/ 
 app.get('/colors/login', (req, res) => {
-    res.render('colors_login') 
-})
-
-app.get('/signup', (req, res) => {
-    res.render('colors_signup') 
+    res.render('colors_login', {session:  req.session}) 
 })
 
 /*********** Colors selection page *********/ 
 app.get('/colors/:id', (req, res) => {
-    res.render('colors_selection') 
+    res.render('colors_selection', {session:  req.session}) 
 })
 
 /*********** Palettes page *********/ 
 app.get('/palettes', (req, res) => {
-    res.render('palletes') 
+    res.render('palletes', {session:  req.session}) 
+})
+
+/*********** All Palettes page *********/ 
+app.get('/palettes/all', (req, res) => {
+    res.render('allPalletes', {session:  req.session}) 
 })
 
 /*********** Docs/API page *********/ 
 app.get('/api-access', (req, res) => {
-    res.render('docs_api') 
+    res.render('docs_api', {session:  req.session}) 
 })
 
 // get all colors --- FOR TESTING ONLY ---
