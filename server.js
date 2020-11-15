@@ -45,6 +45,11 @@ app.get('/colors/:id', (req, res) => {
     res.render('colors_selection') 
 })
 
+/*********** Palettes page *********/ 
+app.get('/palettes', (req, res) => {
+    res.render('palletes') 
+})
+
 // get all colors --- FOR TESTING ONLY ---
 // before using please run "npm run setup" and "npm run seed"
 app.get('/api/colors', paletteController.colors)
