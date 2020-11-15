@@ -60,6 +60,7 @@ app.get('/api-access', (req, res) => {
 app.get('/api/colors', paletteController.colors)
 app.get('/api/palettes', paletteController.palettes ) // get all palettes
 app.get('/api/favourites/:user_id', paletteController.paletteByUser)
+app.get('/api/favourites/colors/:user_id', paletteController.paletteByUser)
 app.post('/api/palettes', paletteController.createPalette)
 app.post('/api/favourites', paletteController.addFavourite)
 
