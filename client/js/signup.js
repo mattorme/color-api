@@ -31,3 +31,4 @@ signupBtn.addEventListener('click', (event) => {
 //             window.location = "/colors/1";
 //         })
 // })
+
