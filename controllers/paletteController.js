@@ -27,8 +27,6 @@ module.exports = {
     },
     createPalette: (req, res) => {
         const sql = 'INSERT INTO palettes (primary_color_hex, secondary_color_hex, tertiary_color_hex, quaternary_color_hex, quinary_color_hex) values ($1, $2, $3, $4, $5) RETURNING id;'
-        console.log(req.body.primary_color_hex)
-        // console.log(sql)
         pool.query(sql, [
             req.body.primary_color_hex,
             req.body.secondary_color_hex,
@@ -36,35 +34,22 @@ module.exports = {
             req.body.quaternary_color_hex,
             req.body.quinary_color_hex,
         ], (err, db) => {
-
-
-            const sql = 'INSERT INTO favourites (user_id, palette_id) values ($1, $2);'
-            pool.query(sql, [
-                req.body.user_id, db.rows[0].id
-            ], (err, db) => {
-                if (err) {
-                    res.json({
-                        message: 'invalid request'
-                    }, 400)
-                } else {
-                    res.json({
-                        message: 'added pallet to favourites'
-                    }, 201)
-                }
-            })
-
-
-
-            // console.log(db.rows[0])
-            // if (err) {
-            //     res.json({
-            //         message: 'invalid request'
-            //     }, 400)
-            // } else {
-            //     res.json({
-            //         message: 'palette created'
-            //     }, 201)
-            // }
+            if (err) {
+                return res.json({ message: "error", err })
+            } else {
+                const sql = 'INSERT INTO favourites (user_id, palette_id) values ($1, $2);'
+                pool.query(sql, [req.body.user_id, db.rows[0].id], (err, db) => {
+                    if (err) {
+                        res.json({
+                            message: 'invalid request'
+                        }, 400)
+                    } else {
+                        res.json({
+                            message: 'created palette and added to favourites'
+                        }, 201)
+                    }
+                })
+            }
         })
     },
     addFavourite: (req, res) => {
