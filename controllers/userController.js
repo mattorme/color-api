@@ -3,9 +3,15 @@
 // const { Pool } = require('pg')
 // const pool = new Pool( process.env.DATABASE_URL || { database: 'colors_api', password: 'password' })
 
-let connString = process.env.DATABASE_URL || { database: 'colors_api', password: 'password' }
+let connString = process.env.DATABASE_URL 
 const { Pool } = require('pg')
-const pool = new Pool({ connectionString : connString })
+let pool 
+
+if (process.env.DATABASE_URL) {
+    pool = new Pool({ connectionString : connString })
+} else {
+    pool = new Pool({ database: 'colors_api', password: 'password' })
+}
 
 const bcrypt = require('bcrypt');
 const saltRounds = 10;

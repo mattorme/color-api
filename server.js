@@ -8,9 +8,15 @@ const userController = require('./controllers/userController');
 const paletteController = require('./controllers/paletteController');
 const port = process.env.PORT || 8080;
 
-let connString = process.env.DATABASE_URL || { database: 'colors_api', password: 'password' }
+let connString = process.env.DATABASE_URL 
 const { Pool } = require('pg')
-const pool = new Pool({ connectionString : connString })
+let pool 
+
+if (process.env.DATABASE_URL) {
+    pool = new Pool({ connectionString : connString })
+} else {
+    pool = new Pool({ database: 'colors_api', password: 'password' })
+}
 
 app.use(session({
     secret: 'keyboard cat',
