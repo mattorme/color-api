@@ -13,28 +13,20 @@ if (process.env.DATABASE_URL) {
 
 
 module.exports = {
-    colors: (req, res) => {
+    allColors: (req, res) => {
         pool.query('select * from colors;', [], (err, db) => {
             res.json({ message: "ok", data: db.rows })
 
         })
     },
-    palettes: (req, res) => {
+    allPalettes: (req, res) => {
         pool.query('select * from palettes;', [], (err, db) => {
             res.json({ message: "ok", data: db.rows })
 
         })
     },
-    paletteByUser: (req, res) => {
-        const sql = `select * from favourites where user_id = ${req.params.user_id};`
-        pool.query(sql, [], (err, db) => {
-            res.json({ message: "ok", data: db.rows })
-        })
-    },
     createPalette: (req, res) => {
-        const sql = 'INSERT INTO palettes (primary_color_hex, secondary_color_hex, tertiary_color_hex, quaternary_color_hex, quinary_color_hex) values ($1, $2, $3, $4, $5);'
-        console.log(req.body.primary_color_hex)
-        // console.log(sql)
+        const sql = 'INSERT INTO palettes (primary_color_hex, secondary_color_hex, tertiary_color_hex, quaternary_color_hex, quinary_color_hex) values ($1, $2, $3, $4, $5) RETURNING id;'
         pool.query(sql, [
             req.body.primary_color_hex,
             req.body.secondary_color_hex,
@@ -43,13 +35,20 @@ module.exports = {
             req.body.quinary_color_hex,
         ], (err, db) => {
             if (err) {
-                res.json({
-                    message: 'invalid request'
-                }, 400)
+                return res.json({ message: "error", err })
             } else {
-                res.json({
-                    message: 'palette created'
-                }, 201)
+                const sql = 'INSERT INTO favourites (user_id, palette_id) values ($1, $2);'
+                pool.query(sql, [req.body.user_id, db.rows[0].id], (err, db) => {
+                    if (err) {
+                        res.json({
+                            message: 'invalid request'
+                        }, 400)
+                    } else {
+                        res.json({
+                            message: 'created palette and added to favourites'
+                        }, 201)
+                    }
+                })
             }
         })
     },
@@ -71,7 +70,7 @@ module.exports = {
             }
         })
     },
-    userPaletteWithColors: (req, res) => {
+    usersFavouritePalettes: (req, res) => {
         let sql = 'SELECT favourites.palette_id, palettes.primary_color_hex, palettes.secondary_color_hex, palettes.tertiary_color_hex , palettes.quaternary_color_hex , palettes.quinary_color_hex  FROM favourites INNER JOIN palettes ON favourites.palette_id=palettes.id WHERE favourites.user_id=$1;'
         pool.query(sql, [req.params.user_id], (err, db) => {
             res.json({ message: "ok", data: db.rows })

@@ -28,7 +28,7 @@ loginBtn.addEventListener('click', (event) => {
     axios.post(`/login`, {  email: loginEmail.value, password: loginPassword.value })
         .then((res) => {
             if(res.data.login) { 
-                window.location = `/colors/${res.data.user.id}`;
+                window.location = `/colors`;
             } else { 
                 console.log("login failed")
             }

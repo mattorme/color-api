@@ -28,56 +28,56 @@ app.use(bodyParser.json())
 app.use(express.static('client'))
 app.use(expressLayouts)
 
-/*********** EJS *********/ 
+/*********** EJS *********/
 app.set('views', './views')
 app.set('view engine', 'ejs')
 // app.set('layout','layout')
 
-/*********** Home page *********/ 
+/*********** Home page *********/
 app.get('/', (req, res) => {
-    console.log(req.session)
-    res.render('home', {session:  req.session}) 
-})
-// , {layout: 'layout'}
-
-/*********** Login page *********/ 
-app.get('/colors/login', (req, res) => {
-    res.render('colors_login', {session:  req.session}) 
+    res.render('home', { session: req.session })
 })
 
-/*********** Colors selection page *********/ 
-app.get('/colors/:id', (req, res) => {
-    res.render('colors_selection', {session:  req.session}) 
+/*********** color genertaor page *********/
+app.get('/colors', (req, res) => {
+    if (req.session.user) {
+        res.render('colors_selection', { session: req.session })
+    } else {
+        res.render('colors_login', { session: req.session })
+    }
 })
 
-/*********** Palettes page *********/ 
+/*********** Specific pallet selection page *********/ //does not actually work yet.... 
+app.get('/colors/:paletteId', (req, res) => {
+    pool.query('select * from palettes WHERE id=$1;', [req.params.paletteId], (err, db) => {
+        res.render('colors_selection', { session: req.session, data: db.rows })
+    })
+})
+
+/*********** Palettes page *********/
 app.get('/palettes', (req, res) => {
-    res.render('palletes', {session:  req.session}) 
+    res.render('palletes', { session: req.session })
 })
 
-/*********** All Palettes page *********/ 
+/*********** All Palettes page *********/
 app.get('/palettes/all', (req, res) => {
-    res.render('allPalletes', {session:  req.session}) 
+    res.render('allPalletes', { session: req.session })
 })
 
-/*********** Docs/API page *********/ 
+/*********** Docs/API page *********/
 app.get('/api-access', (req, res) => {
-    res.render('docs_api', {session:  req.session}) 
+    res.render('docs_api', { session: req.session })
 })
 
-// get all colors --- FOR TESTING ONLY ---
-// before using please run "npm run setup" and "npm run seed"
-app.get('/api/colors', paletteController.colors)
-app.get('/api/palettes', paletteController.palettes ) // get all palettes
-app.get('/api/favourites/:user_id', paletteController.paletteByUser)
-app.get('/api/favourites/colors/:user_id', paletteController.paletteByUser)
+app.get('/api/colors', paletteController.allColors) //Only purpose is testing 
+app.get('/api/palettes', paletteController.allPalettes)
+app.get('/api/colors/palettes/favourites/:user_id', paletteController.usersFavouritePalettes)
 app.post('/api/palettes', paletteController.createPalette)
 app.post('/api/favourites', paletteController.addFavourite)
-
-app.get('/users/all', userController.checkSession, userController.allUsers) //No purpose just for testing really
-app.post('/users', userController.createUser )
-app.post('/login', userController.loginUser )
-app.get('/logout', userController.checkSession, userController.logoutUser )
+app.get('/users/all', userController.checkSession, userController.allUsers) //Only purpose is testing 
+app.post('/users', userController.createUser)
+app.post('/login', userController.loginUser)
+app.get('/logout', userController.checkSession, userController.logoutUser)
 
 app.listen(port, () => {
     console.log(`listening from port ${port}`)
