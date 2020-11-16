@@ -1,312 +1,730 @@
 .login-page-grid {
-    display: grid;
-    grid-template-columns: 1200px 50px;
-    margin-top: 4em;
+  display: grid;
+  grid-template-columns: 1200px 50px;
+  margin-top: 4em;
 }
 .outer-color-container {
-    height: 25em;
-    margin-left: 30px;
-    padding-right: 2px;
-    box-shadow: 0 10px 15px rgba(20,20,20,0.15);
+  height: 25em;
+  margin-left: 30px;
+  padding-right: 2px;
+  box-shadow: 0 10px 15px rgba(20, 20, 20, 0.15);
 }
 .pcr-button {
-    margin-top: 0.5em;
-    margin-left: 0.5em;
-    opacity: 0.5;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  opacity: 0.5;
 }
 .generate-btn {
-    position: relative;
-    top: 4em;
-    left: 2em;
-    outline: rgb(122, 131, 150);
+  position: relative;
+  top: 4em;
+  left: 2em;
+  outline: rgb(122, 131, 150);
 }
 div {
-    display: inline-block;
+  display: inline-block;
 }
 .primary-color-container {
-    background-color: aqua;
-    height: 40%;
-    transition: .5s;
-    animation: 1s forwards 0s ease;
+  background-color: aqua;
+  height: 40%;
+  transition: 0.5s;
+  animation: 1s forwards 0s ease;
 }
 .secondary-color-container {
-    background-color: rgb(83, 151, 151);
-    height: 40%;
-    transition: .5s;
-    animation: 1s forwards 0s ease;
+  background-color: rgb(83, 151, 151);
+  height: 40%;
+  transition: 0.5s;
+  animation: 1s forwards 0s ease;
 }
 .tertiary-color-container {
-    background-color: rgb(11, 221, 134);
-    height: 40%;
-    transition: .5s;
-    animation: 1s forwards 0s ease;
+  background-color: rgb(11, 221, 134);
+  height: 40%;
+  transition: 0.5s;
+  animation: 1s forwards 0s ease;
 }
 .quaternary-color-container {
-    background-color: rgb(144, 172, 23);
-    height: 40%;
-    transition: .5s;
-    animation: 1s forwards 0s ease;
+  background-color: rgb(144, 172, 23);
+  height: 40%;
+  transition: 0.5s;
+  animation: 1s forwards 0s ease;
 }
 .quinary-color-container {
-    background-color: rgb(33, 202, 202);
-    height: 40%;
-    transition: .5s;
-    animation: 1s forwards 0s ease;
+  background-color: rgb(33, 202, 202);
+  height: 40%;
+  transition: 0.5s;
+  animation: 1s forwards 0s ease;
 }
 .color-picker-background {
-    background: rgb(0 4 6 / 25%) !important;
-    height: 2.5em;
-    width: 10em;
+  background: rgb(0 4 6 / 25%) !important;
+  height: 2.5em;
+  width: 10em;
 }
 .color-picker-hex {
-    margin-left: 5em;
-    position: relative;
-    top: -1.3em;
-    left: -2em;
+  margin-left: 5em;
+  position: relative;
+  top: -1.3em;
+  left: -2em;
 }
 /* Login page */
 .login-page-title {
-    font-family: 'Nunito', sans-serif;
-    font-size: 45px;
-    color: #7b756df6;
+  font-family: "Nunito", sans-serif;
+  font-size: 45px;
+  color: #7b756df6;
 }
 .login-page-description {
-    font-family: 'Nunito', sans-serif;
-    font-size: 17px;
-    color: #7b756df6;
+  font-family: "Nunito", sans-serif;
+  font-size: 17px;
+  color: #7b756df6;
 }
 .login-page-btn {
-    float: left;
-    background:#4bc2c9;
-    color: white;
-    padding: 5px 45px;
-    margin: 0.5% 0% 0.5% 0.5%;
-    border-radius: 5px;
-    border: none;
-    font-size: 15px;
-    box-shadow: 0 10px 15px rgba(20,20,20,0.15);
+  float: left;
+  background: #4bc2c9;
+  color: white;
+  padding: 5px 45px;
+  margin: 0.5% 0% 0.5% 0.5%;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  box-shadow: 0 10px 15px rgba(20, 20, 20, 0.15);
 }
 .login-page-body {
-    background: white;
-    color: white;
+  background: white;
+  color: white;
 }
-  
+
 .login-form {
-    margin: 40px 0;
+  margin: 40px 0;
 }
-   
+
 .box {
-    height: 50em;
-    width: 18em;
-    padding: 40px;
-    background: rgb(245 229 229);
-    box-sizing: border-box;
+  height: 50em;
+  width: 18em;
+  padding: 40px;
+  background: rgb(245 229 229);
+  box-sizing: border-box;
 }
-.box h2, .box h3 {
-    margin: 0 0 30px;
-    padding: 0;
-    color: #FFF;
-    text-align: center;
+.box h2,
+.box h3 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
 }
-  
+
 .box .inputBox {
-    position: relative;
-    padding-top: 10px;
+  position: relative;
+  padding-top: 10px;
 }
 .box .inputBox input {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: grey;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #FFF;
-    outline: none;
-    background: transparent;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: grey;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
 }
 .box .inputBox label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: grey;
-    pointer-events: none;
-    transition: .5s;
-    animation: LabelOnLoad 1s forwards 0s ease;
-} 
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: grey;
+  pointer-events: none;
+  transition: 0.5s;
+  animation: LabelOnLoad 1s forwards 0s ease;
+}
 /* jian's code starts here */
 /* side bar */
 .side-bar {
-    background-color: rgba(255, 255, 255, 0.753);
-    height: 50em;
-    width: 40px;
-    background-color: white;
-    position: relative;
-    top: -25em;
-    right: -75em;
+  background-color: rgba(255, 255, 255, 0.753);
+  height: 50em;
+  width: 40px;
+  background-color: white;
+  position: relative;
+  top: -25em;
+  right: -75em;
 }
 .side-bar img {
-    width: 30px;
-    height: 30px;
-    padding: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
 }
 .export-btn {
-    position: absolute;
-    bottom: 100px;
+  position: absolute;
+  bottom: 100px;
 }
 /* export modal */
 /* export modal background */
 .export-modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .export-modal-content {
-    display: block;
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    border-radius: 20px;
-    width: 30%;
-    height: 30%;
-    text-align: center;
+  display: block;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 30%;
+  height: 30%;
+  text-align: center;
 }
 
 .export-modal-content p {
-    margin: 10px;
-    font-family: 'Raleway', sans-serif;
+  margin: 10px;
+  font-family: "Raleway", sans-serif;
 }
 .export-modal-content img {
-    height: 50%;
-    width: 50%;
-    display: inline;
+  height: 50%;
+  width: 50%;
+  display: inline;
 }
-  
+
 .export-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 2%;
-    text-align: center;
-    align-items: center;
-    margin: 8% 0;
-    gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2%;
+  text-align: center;
+  align-items: center;
+  margin: 8% 0;
+  gap: 10px;
 }
-.css-export-btn, .api-export-btn:hover {
-    cursor: pointer;
+.css-export-btn,
+.api-export-btn:hover {
+  cursor: pointer;
 }
 /* all modals' close buttons */
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
-  
+
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* css modal */
 .css-modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto;
-    /* background-color: rgba(0,0,0,0.4);  */
-
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* background-color: rgba(0,0,0,0.4);  */
 }
 
 .css-modal-content p {
-    margin: 10px;
-    font-family: 'Raleway', sans-serif;
+  margin: 10px;
+  font-family: "Raleway", sans-serif;
 }
 
 .css-modal-content hr {
-    margin: 10px;
+  margin: 10px;
 }
 
 .css-modal-content {
-    display: block;
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    border-radius: 20px;
-    width: 30%; 
-    height: 30%;
-    text-align: center;
+  display: block;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 30%;
+  height: 30%;
+  text-align: center;
 }
 
-.css-export-btn, .api-export-btn:hover {
-    cursor: pointer;
+.css-export-btn,
+.api-export-btn:hover {
+  cursor: pointer;
 }
 
 /* api modal */
 .api-modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%; 
-    overflow: auto; 
-    /* background-color: rgba(0,0,0,0.4);  */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* background-color: rgba(0,0,0,0.4);  */
 }
 .api-modal-content {
-    display: block;
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    border-radius: 20px;
-    width: 30%; 
-    height: 30%;
-    text-align: center;
+  display: block;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 30%;
+  height: 30%;
+  text-align: center;
 }
 
-
 .api-modal-content p {
-    margin: 10px;
-    font-family: 'Raleway', sans-serif;
+  margin: 10px;
+  font-family: "Raleway", sans-serif;
 }
 
 .api-modal-content hr {
-    margin: 10px;
+  margin: 10px;
 }
 
 .css-textarea {
-    width: 90%;
-    height: 50%;
-    border: 1px solid lightgray;
+  width: 90%;
+  height: 50%;
+  border: 1px solid lightgray;
 }
 
-.css-copy-btn p, .api-copy-btn p{
-    border: 1px solid lightgray;
-    border-radius: 20px;
-    padding: 10px 40px;
-    margin: 0 20px;
+.css-copy-btn p,
+.api-copy-btn p {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  padding: 10px 40px;
+  margin: 0 20px;
 }
 
 .api-textarea {
-    width: 90%;
-    height: 50%;
-    border: 1px solid lightgray;
+  width: 90%;
+  height: 50%;
+  border: 1px solid lightgray;
+}
+.copy-btn p {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  padding: 10px 40px;
+  margin: 0 20px;
+}
+
+.api-textarea {
+  width: 90%;
+  height: 50%;
+  border: 1px solid lightgray;
+}
+
+@media only screen and (max-width: 3840px) {
+  .logo {
+    margin-right: 10px;
+    padding-left: 50px;
+    margin-right: 1800px;
+    font-size: 24px;
+  }
+
+  .nav-bar-item {
+    /* font-size: 16px; */
+    margin: 35px 20px 20px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .box {
+    margin-left: 500px;
+  }
+
+  .login-page-grid {
+    width: 2500px;
+    grid-template-columns: 1fr;
+  }
+
+  .side-bar {
+    right: -160em;
+  }
+}
+
+@media only screen and (max-width: 2560px) {
+  .logo {
+    margin-right: 10px;
+    padding-left: 50px;
+    margin-right: 1200px;
+    font-size: 24px;
+  }
+
+  .nav-bar-item {
+    /* font-size: 16px; */
+    margin: 35px 20px 20px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .box {
+    margin-left: 250px;
+  }
+
+  .side-bar {
+    right: -130em;
+  }
+
+  .login-page-grid {
+    grid-template-columns: 1fr;
+    width: 1820px;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  .logo {
+    margin-right: 10px;
+    padding-left: 50px;
+    margin-right: 650px;
+    font-size: 24px;
+  }
+
+  .nav-bar-item {
+    /* font-size: 16px; */
+    margin: 35px 20px 20px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .box {
+    margin-left: 150px;
+  }
+
+  .side-bar {
+    right: -100em;
+  }
+
+  .login-page-grid {
+    grid-template-columns: 1fr;
+    width: 1500px;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .side-bar {
+    right: -90em;
+  }
+
+  .login-page-grid {
+    grid-template-columns: 1fr;
+    width: 1400px;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .logo {
+    margin-right: 800px;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+
+  .nav-bar-item {
+    font-size: 12px;
+    margin: 32.5px 20px 20px 0;
+    padding-left: 15px;
+  }
+
+  .box {
+    margin-left: 75px;
+  }
+
+  .side-bar {
+    right: -75em;
+  }
+
+  .login-page-grid {
+    grid-template-columns: 1fr;
+    width: 1100px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .logo {
+    margin-right: 450px;
+
+    padding-left: 10px;
+    font-size: 14px;
+  }
+
+  .nav-bar-item {
+    font-size: 12px;
+    margin: 32.5px 20px 20px 0;
+    padding-left: 15px;
+  }
+  .side-bar {
+    right: -60em;
+  }
+
+  .login-page-grid {
+    grid-template-columns: 1fr;
+    width: 900px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .logo {
+    display: none;
+  }
+
+  .nav-bar-item {
+    font-size: 8px;
+    margin: 20px 5px 20px 0;
+    padding-left: 15px;
+  }
+
+  .login-page-grid {
+    grid-template-columns: 1fr;
+    width: 480px;
+  }
+
+  .outer-color-container {
+    margin-left: 0;
+    margin-right: -6px;
+    padding-right: 0;
+  }
+
+  .primary-color-container {
+    height: 20%;
+  }
+
+  .secondary-color-container {
+    height: 20%;
+  }
+
+  .tertiary-color-container {
+    height: 20%;
+  }
+
+  .quaternary-color-container {
+    height: 20%;
+  }
+
+  .quinary-color-container {
+    height: 20%;
+  }
+
+  .login-page-btn {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .generate-btn {
+    left: 50%;
+    /* margin-bottom: 50px; */
+  }
+
+  .login-page-title {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .login-page-description {
+    text-align: center;
+  }
+
+  .login-page-btn {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .side-bar {
+    right: -27.82em;
+    top: -26.1em;
+  }
+
+  .export-btn {
+    position: relative;
+    bottom: -250px;
+  }
+
+  .box {
+    height: 35em;
+    margin: 0;
+  }
+
+  footer {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .logo {
+    display: none;
+  }
+
+  .nav-bar-item {
+    font-size: 8px;
+    margin: 20px 5px 20px 0;
+    padding-left: 15px;
+  }
+
+  .login-page-grid {
+    grid-template-columns: 1fr;
+    width: 300px;
+  }
+
+  .outer-color-container {
+    margin-left: 0;
+    margin-right: -6px;
+    padding-right: 0;
+  }
+
+  .primary-color-container {
+    height: 20%;
+  }
+
+  .secondary-color-container {
+    height: 20%;
+  }
+
+  .tertiary-color-container {
+    height: 20%;
+  }
+
+  .quaternary-color-container {
+    height: 20%;
+  }
+
+  .quinary-color-container {
+    height: 20%;
+  }
+
+  .login-page-btn {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .generate-btn {
+    left: 50%;
+    /* margin-bottom: 50px; */
+  }
+
+  .login-page-title {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .login-page-description {
+    text-align: center;
+  }
+
+  .login-page-btn {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .side-bar {
+    right: -18em;
+    top: -26.1em;
+  }
+
+  .export-btn {
+    position: relative;
+    bottom: -250px;
+  }
+
+  .box {
+    height: 35em;
+    margin: 0;
+  }
+
+  footer {
+    font-size: 8px;
+  }
+}
+@media (max-width: 300px) {
+  .logo {
+    display: none;
+  }
+
+  .nav-bar-item {
+    font-size: 8px;
+    margin: 20px 5px 20px 0;
+    padding-left: 15px;
+  }
+
+  .login-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .outer-color-container {
+    margin-left: 0;
+    margin-right: -6px;
+    padding-right: 0;
+  }
+
+  .primary-color-container {
+    height: 20%;
+  }
+
+  .secondary-color-container {
+    height: 20%;
+  }
+
+  .tertiary-color-container {
+    height: 20%;
+  }
+
+  .quaternary-color-container {
+    height: 20%;
+  }
+
+  .quinary-color-container {
+    height: 20%;
+  }
+
+  .login-page-btn {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .generate-btn {
+    left: 50%;
+    /* margin-bottom: 50px; */
+  }
+
+  .login-page-title {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .login-page-description {
+    text-align: center;
+  }
+
+  .login-page-btn {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .side-bar {
+    right: -16.1em;
+    top: -26.1em;
+  }
+
+  .export-btn {
+    position: relative;
+    bottom: -250px;
+  }
+
+  .box {
+    height: 35em;
+    margin: 0;
+  }
+
+  footer {
+    font-size: 8px;
+  }
 }

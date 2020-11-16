@@ -190,6 +190,10 @@ div {
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  .box {
+    margin-left: 500px;
+  }
 }
 
 @media only screen and (max-width: 2560px) {
@@ -205,6 +209,10 @@ div {
     margin: 35px 20px 20px 0;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .box {
+    margin-left: 250px;
   }
 }
 
@@ -222,35 +230,42 @@ div {
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  .box {
+    margin-left: 150px;
+  }
 }
 
 @media only screen and (max-width: 1500px) {
   .logo {
-    margin-right: 10px;
-    padding-left: 50px;
-    margin-right: 650px;
-    font-size: 24px;
+    margin-right: 800px;
+    padding-left: 10px;
+    font-size: 14px;
   }
 
   .nav-bar-item {
-    /* font-size: 16px; */
-    margin: 35px 20px 20px 0;
+    font-size: 12px;
+    margin: 32.5px 20px 20px 0;
     padding-left: 15px;
-    padding-right: 15px;
+  }
+
+  .box {
+    margin-left: 75px;
   }
 }
 
 @media only screen and (max-width: 1280px) {
   .logo {
     margin-right: 450px;
+
     padding-left: 10px;
-    font-size: 24px;
+    font-size: 14px;
   }
 
   .nav-bar-item {
-    margin: 35px 20px 20px 0;
+    font-size: 12px;
+    margin: 32.5px 20px 20px 0;
     padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -367,10 +382,9 @@ div {
   .logo {
     display: none;
   }
-
   .nav-bar-item {
-    font-size: 12px;
-    margin: 32.5px 20px 20px 0;
+    font-size: 8px;
+    margin: 20px 5px 20px 0;
     padding-left: 15px;
   }
 
@@ -438,7 +452,7 @@ div {
 
   .box {
     height: 35em;
-    margin-left: 20%;
+    margin: 0;
   }
 
   footer {
@@ -451,8 +465,8 @@ div {
   }
 
   .nav-bar-item {
-    font-size: 12px;
-    margin: 20px 20px 20px 0;
+    font-size: 8px;
+    margin: 20px 5px 20px 0;
     padding-left: 15px;
   }
 
@@ -493,6 +507,7 @@ div {
 
   .generate-btn {
     left: 50%;
+    margin-bottom: 500px;
   }
 
   .login-page-title {
@@ -511,6 +526,7 @@ div {
 
   .box {
     height: 35em;
+    margin: 0;
   }
 
   footer {

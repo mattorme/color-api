@@ -170,7 +170,7 @@
   .logo {
     margin-right: 10px;
     padding-left: 50px;
-    margin-right: 650px;
+    margin-right: 550px;
     font-size: 24px;
   }
 
@@ -178,7 +178,7 @@
     /* font-size: 16px; */
     margin: 35px 20px 20px 0;
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 0px;
   }
 
   .home-body h1 {
@@ -307,9 +307,7 @@
 
 @media only screen and (max-width: 768px) {
   .logo {
-    margin-right: 10px;
-    padding-left: 10px;
-    font-size: 14px;
+    display: none;
   }
 
   .nav-bar-item {
@@ -365,8 +363,8 @@
   }
 
   .nav-bar-item {
-    font-size: 12px;
-    margin: 32.5px 20px 20px 0;
+    font-size: 8px;
+    margin: 20px 5px 20px 0;
     padding-left: 15px;
   }
 
@@ -416,8 +414,8 @@
   }
 
   .nav-bar-item {
-    font-size: 12px;
-    margin: 20px 20px 20px 0;
+    font-size: 8px;
+    margin: 20px 5px 20px 0;
     padding-left: 15px;
   }
 
