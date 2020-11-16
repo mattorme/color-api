@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/export.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"/>
-</head>
-<body>
+<body class="colors-selection-body">
     <div>
         <button class="login-page-btn generate-btn">Generate</button>
     </div>
@@ -79,11 +70,11 @@
                 <span class="close">&times;</span>
                 <p>CSS</p>
                 <hr>
-                <textarea class="css-textarea">
-                    *CSS TEXT HERE*
+                <textarea class="css-textarea" readonly>
+<!-- *CSS TEXT HERE* -->
                 </textarea>
                 <hr>
-                <div class="copy-btn"><p>Copy</p></div>
+                <div class="css-copy-btn"><p>Copy</p></div>
             </div>
         </div> 
 ​
@@ -94,10 +85,10 @@
                 <p>API</p>
                 <hr>
                 <textarea class="api-textarea">
-                    *API text area*
+<!-- *API text here* -->
                 </textarea>
                 <hr>
-                <div class="copy-btn"><p>Copy</p></div>
+                <div class="api-copy-btn"><p>Copy</p></div>
             </div>
         </div>
 ​
@@ -107,7 +98,7 @@
     <script src="/js/login.js"></script>
     <script src="/js/export.js"></script>
 </body>
-</html>
+
 
 <%- contentFor('navbarLogin') %>
 <% if(session.user){      %>

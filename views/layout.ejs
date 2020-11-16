@@ -1,81 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Color Schemas</title>
+        
+        <!-- homepage css -->
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Raleway&display=swap" rel="stylesheet">
+        <!-- login page + color selection page css -->
+        <link rel="stylesheet" type="text/css" href="/css/login.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"/>
+        <!-- export modal css -->
+        <link rel="stylesheet" href="/css/export.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"/>
+        <!-- docs css -->
+        <link rel="stylesheet" href="/css/docs_api.css" />
+        <!-- palettes page css -->
+        <link rel="stylesheet" href="/css/palletes.css" />
+        <style>
+            /* universal */
+            :root {
+            /* --primary-color: #97f9f9ff;
+            --secondary-color: #c59fc9ff;
+            --tertiary-color: #a4def9ff;
+            --quaternary-color: #c1e0f7ff;
+            --quinary-color: #cfbae1ff; */
+            --primary-color: #52489cff;
+            --secondary-color: #4062bbff;
+            --tertiary-color: #59c3c3ff;
+            --white: #ebebebff;
+            --quinary-color: #f45b69ff;
+            }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <link rel="stylesheet" href="/layout.css" /> -->
-  <title>Document</title>
+            * {
+            padding: 0;
+            margin: 0;
+            }
 
-  <style>
-    /* universal */
-    :root {
-      /* --primary-color: #97f9f9ff;
-    --secondary-color: #c59fc9ff;
-    --tertiary-color: #a4def9ff;
-    --quaternary-color: #c1e0f7ff;
-    --quinary-color: #cfbae1ff; */
-      --primary-color: #52489cff;
-      --secondary-color: #4062bbff;
-      --tertiary-color: #59c3c3ff;
-      --white: #ebebebff;
-      --quinary-color: #f45b69ff;
-    }
+                    /* Layout */
 
-    * {
-      padding: 0;
-      margin: 0;
-    }
+            /* Navigation */
+            .nav-bar {
+            background-color: var(--secondary-color);
+            }
 
-    /* Layout */
+            .logo {
+            margin: 15px 10px 10px 0;
+            padding: 15px 0 15px 50px;
+            /* padding-left: 50px; */
+            font-size: 20px;
+            }
 
-    /* Navigation */
-    .nav-bar {
-      background-color: var(--secondary-color);
-    }
+            .nav-bar a {
+            text-decoration: none;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px 0;
+            }
 
-    .logo {
-      margin: 15px 10px 10px 0;
-      padding: 15px 0 15px 50px;
-      /* padding-left: 50px; */
-      font-size: 20px;
-    }
+            .nav-bar-item {
+            list-style: none;
+            margin: 20px 100px 20px 0;
+            font-size: 20px;
+            }
 
-    .nav-bar a {
-      text-decoration: none;
-      color: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-      padding: 30px 0;
-    }
+            .nav-bar ul {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            }
 
-    .nav-bar-item {
-      list-style: none;
-      margin: 20px 100px 20px 0;
-      font-size: 20px;
-    }
+            /* Footer */
+            .footer-layout {
+            width: 35%;
+            margin: 0 auto;
+            padding-top: 50px;
+            }
 
-    .nav-bar ul {
-      display: flex;
-      justify-content: space-between;
-      margin: 0;
-    }
-
-    /* Footer */
-    .footer-layout {
-      width: 35%;
-      margin: 0 auto;
-      padding-top: 50px;
-    }
-
-    .footer-p {
-      text-align: center;
-      /* color: var(--quinary-color); */
-      color: rgb(162, 169, 177);
-    }
-  </style>
-  <script src="https://kit.fontawesome.com/a57ac5e9db.js" crossorigin="anonymous"></script>
-
-</head>
+            .footer-p {
+            text-align: center;
+            /* color: var(--quinary-color); */
+            color: rgb(162, 169, 177);
+            }
+        </style>
+    </head>
 
 <body>
   <header class="header-layout">

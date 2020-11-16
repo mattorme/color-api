@@ -181,18 +181,25 @@ div {
     height: 30%;
     text-align: center;
 }
+
+.export-modal-content p {
+    margin: 10px;
+    font-family: 'Raleway', sans-serif;
+}
 .export-modal-content img {
-    height: 40px;
-    width: 40px;
+    height: 50%;
+    width: 50%;
     display: inline;
 }
   
 .export-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 20px;
+    padding: 2%;
     text-align: center;
     align-items: center;
+    margin: 8% 0;
+    gap: 10px;
 }
 .css-export-btn, .api-export-btn:hover {
     cursor: pointer;
@@ -224,6 +231,15 @@ div {
     overflow: auto;
     /* background-color: rgba(0,0,0,0.4);  */
 
+}
+
+.css-modal-content p {
+    margin: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.css-modal-content hr {
+    margin: 10px;
 }
 
 .css-modal-content {
@@ -266,13 +282,23 @@ div {
     text-align: center;
 }
 
+
+.api-modal-content p {
+    margin: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.api-modal-content hr {
+    margin: 10px;
+}
+
 .css-textarea {
     width: 90%;
     height: 50%;
     border: 1px solid lightgray;
 }
 
-.copy-btn p {
+.css-copy-btn p, .api-copy-btn p{
     border: 1px solid lightgray;
     border-radius: 20px;
     padding: 10px 40px;

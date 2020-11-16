@@ -1,11 +1,9 @@
 
-* {
+
+.home-body {
     box-sizing: border-box;
     text-align: center;
     font-family: 'Raleway', sans-serif;
-}
-
-.home-body {
     background-color: white;
     margin: 0px 15%;
 }
@@ -33,10 +31,10 @@
     border: 1px solid rgb(214, 222, 233);
     border-radius: 10px;
     margin: 30px auto 20px;
-    transition: ease-in 400ms;
+    transition: ease-in 1s;
 }
 
-.home-body a {
+.start-btn {
     text-decoration: none;
     color: rgb(15, 119, 223);
     border: 2px solid rgb(54, 150, 249);
@@ -49,12 +47,12 @@
     width: 500px;
 }
 
-.home-body a:focus {
+.start-btn:focus {
     box-shadow: none;
     transform: translateY(3px);
 }
 
-.home-body a:hover {
+.start-btn:hover {
     cursor: pointer;
 }
 
@@ -79,6 +77,7 @@
     padding: 100px;
 }
 
-
-
+.features-grid h4 {
+    margin: 15px auto;
+}
 
