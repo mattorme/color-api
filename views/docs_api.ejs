@@ -1,70 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/docs_api.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Color Schemas Docs</h1>
-    <p class="description">
-      Below are the docs for how to use our Color Schemas application through
-      either CSS or our API. Generate a random color palette, and you can
-      either, save it to your user created profile for later use, or export it
-      directly from the color generator page.
-    </p>
+
+<body class="docs-api-body">
+  <h1>Color Schemas Docs</h1>
+  <p class="description">
+    Below are the docs for how to use our Color Schemas application through
+    either CSS or our API. Generate a random color palette, and you can
+    either, save it to your user created profile for later use, or export it
+    directly from the color generator page.
+  </p>
 ​
-    <div class="docs-container">
-      <div class="docs">
-        <p>
-          For CSS, click the export button and it will show you your root
-          variables ready to copy and paste straight in to your CSS file.
-          Example:
-        </p>
-        <div class="docs-border">
-          <span class="semi-colon">:</span> <span class="root"> root</span>
-          <span class="curly"> {</span>
-          <br />
-          <span class="colors">--primary-color</span>: #<span class="hex"
-            >52489C</span
-          >; <br />
-          <span class="colors">--secondary-color</span>: #<span class="hex"
-            >4062BB</span
-          >; <br />
-          <span class="colors">--tertiary-color</span>: #<span class="hex"
-            >59C3C3</span
-          >; <br />
-          <span class="colors">--quaternary-color</span>: #<span class="hex"
-            >F45B69</span
-          >; <br />
-          <span class="colors">--quinary-color</span>: #<span class="hex"
-            >EBEBEB</span
-          >; <br />
+  <div class="docs-container">
+    <div class="docs">
+      <p>
+        For CSS, click the export button and it will show you your root
+        variables ready to copy and paste straight in to your CSS file.
+        Example:
+      </p>
+      <div class="docs-border">
+        <span class="semi-colon">:</span> <span class="root"> root</span>
+        <span class="curly"> {</span>
+        <br />
+        <span class="colors">--primary-color</span>: #<span class="hex"
+          >52489C</span
+        >; <br />
+        <span class="colors">--secondary-color</span>: #<span class="hex"
+          >4062BB</span
+        >; <br />
+        <span class="colors">--tertiary-color</span>: #<span class="hex"
+          >59C3C3</span
+        >; <br />
+        <span class="colors">--quaternary-color</span>: #<span class="hex"
+          >F45B69</span
+        >; <br />
+        <span class="colors">--quinary-color</span>: #<span class="hex"
+          >EBEBEB</span
+        >; <br />
 ​
-          <span class="curly"> }</span>
-        </div>
-      </div>
-      <div class="docs">
-        <p>For use of the API:</p>
-        <div class="docs-border">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam,
-          similique accusantium eligendi consequatur provident nam praesentium
-          illo reprehenderit quod, error dolor veniam, hic aut quasi ex sunt.
-          Sed nostrum deleniti quae totam accusantium perspiciatis magni autem
-          omnis! Commodi perferendis labore fuga accusamus, dicta totam quas
-          obcaecati nobis expedita quos voluptates laboriosam soluta rem
-          inventore consectetur earum. Doloribus ipsa tenetur ad possimus,
-          magnam commodi cumque. Rerum ab odit perspiciatis ratione enim
-          accusamus quos. Repellendus voluptas aut voluptate velit officia totam
-          iure temporibus ipsam placeat quasi voluptatum amet laboriosam ut,
-          assumenda fugiat non sunt, unde, eos fugit exercitationem odit?
-          Recusandae, nihil tenetur?
-        </div>
+        <span class="curly"> }</span>
       </div>
     </div>
-  </body>
-</html>
+    <div class="docs">
+      <p>For use of the API:</p>
+      <div class="docs-border">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam,
+        similique accusantium eligendi consequatur provident nam praesentium
+        illo reprehenderit quod, error dolor veniam, hic aut quasi ex sunt.
+        Sed nostrum deleniti quae totam accusantium perspiciatis magni autem
+        omnis! Commodi perferendis labore fuga accusamus, dicta totam quas
+        obcaecati nobis expedita quos voluptates laboriosam soluta rem
+        inventore consectetur earum. Doloribus ipsa tenetur ad possimus,
+        magnam commodi cumque. Rerum ab odit perspiciatis ratione enim
+        accusamus quos. Repellendus voluptas aut voluptate velit officia totam
+        iure temporibus ipsam placeat quasi voluptatum amet laboriosam ut,
+        assumenda fugiat non sunt, unde, eos fugit exercitationem odit?
+        Recusandae, nihil tenetur?
+      </div>
+    </div>
+  </div>
+</body>
+
 
 <%- contentFor('navbarLogin') %>
 <% if(session.user){      %>

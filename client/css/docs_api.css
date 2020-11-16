@@ -5,12 +5,12 @@
     --white: #ebebeb;
     --quinary-color: #f45b69;
 }
-* {
+.doc-api-body {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-h1 {
+.doc-api-body h1 {
     color: var(--quinary-color);
     text-align: center;
     font-size: 72px;
@@ -44,18 +44,18 @@ h1 {
     background-color: #dddddd;
     font-size: 18px;
 }
-.semi-colon {
+.doc-api-body .semi-colon {
     color: burlywood;
 }
-.root {
+.doc-api-body .root {
     color: purple;
 }
-.curly {
+.doc-api-body .curly {
     color: yellow;
 }
-.colors {
+.doc-api-body .colors {
     color: orange;
 }
-.hex {
+.doc-api-body .hex {
     color: green;
 }
