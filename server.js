@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const expressLayouts = require('express-ejs-layouts');
 
 const session = require('express-session');
+var MemoryStore = require('memorystore')(session);
 const app = express();
 const userController = require('./controllers/userController');
 const paletteController = require('./controllers/paletteController');
@@ -19,6 +20,10 @@ if (process.env.DATABASE_URL) {
 }
 
 app.use(session({
+    cookie: { maxAge: 86400000 },
+    store: new MemoryStore({
+      checkPeriod: 86400000 // prune expired entries every 24h
+    }),
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: true
