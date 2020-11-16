@@ -1,10 +1,23 @@
-<body class="colors-selection-body">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/export.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"/>
+    <style>
+
+    </style>
+</head>
+<body>
     <div>
         <button class="login-page-btn generate-btn">Generate</button>
     </div>
+
     
     <main class="login-page-grid">
-        
+
         <section class="outer-color-container">
             <section class="primary-color-container colors">
                 <div class="color-picker-background">
@@ -40,7 +53,7 @@
 ​
         <section class="login-container">
             <div class="side-bar">
-                <img class="save-btn" src="https://www.flaticon.com/svg/static/icons/svg/2983/2983818.svg" alt="">
+                <img data-userid=`<%= session.user.id%>` class="save-btn" src="https://www.flaticon.com/svg/static/icons/svg/2983/2983818.svg" alt="">
                 <img class="fav-btn" src="https://www.flaticon.com/svg/static/icons/svg/446/446072.svg" alt="">
                 <img class="export-btn" src="https://www.flaticon.com/svg/static/icons/svg/3388/3388674.svg" alt="">
             </div>
@@ -96,6 +109,7 @@
 ​
     <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
     <script src="/js/login.js"></script>
+    <script src="/js/save.js"></script>
     <script src="/js/export.js"></script>
 </body>
 
@@ -103,9 +117,8 @@
 <%- contentFor('navbarLogin') %>
 <% if(session.user){      %>
 <li class=""><%= session.user.name%></li>
-<%let url = `/colors/${session.user.id}` %>
-<li class="nav-bar-item"><a href=<%= url %>>Saved</a></li>
+<li class="nav-bar-item"><a href="/palettes">Saved</a></li>
 <li class="nav-bar-item"><a href="/logout">Logout</a></li>
 <% }else {  %>
-<li class="nav-bar-item"><a href="/colors/login">Login</a></li>
+<li class="nav-bar-item"><a href="/colors">Login</a></li>
 <% }   %>
