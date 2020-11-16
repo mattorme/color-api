@@ -1,5 +1,5 @@
 const { Pool } = require('pg')
-const pool = new Pool({ database: 'colors_api', password: 'password' })
+const pool = new Pool(process.env.DATABASE_URL || { database: 'colors_api', password: 'password' })
 
 module.exports = {
     colors: (req, res) => {
