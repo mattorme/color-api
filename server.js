@@ -7,8 +7,10 @@ const app = express();
 const userController = require('./controllers/userController');
 const paletteController = require('./controllers/paletteController');
 const port = process.env.PORT || 8080;
+
+let connString = process.env.DATABASE_URL || { database: 'colors_api', password: 'password' }
 const { Pool } = require('pg')
-const pool = new Pool(process.env.DATABASE_URL || { database: 'colors_api', password: 'password' })
+const pool = new Pool({ connectionString : connString })
 
 app.use(session({
     secret: 'keyboard cat',

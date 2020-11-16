@@ -1,7 +1,12 @@
 //router to create a user
 //need to handle errors
+// const { Pool } = require('pg')
+// const pool = new Pool( process.env.DATABASE_URL || { database: 'colors_api', password: 'password' })
+
+let connString = process.env.DATABASE_URL || { database: 'colors_api', password: 'password' }
 const { Pool } = require('pg')
-const pool = new Pool( process.env.DATABASE_URL || { database: 'colors_api', password: 'password' })
+const pool = new Pool({ connectionString : connString })
+
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const apiKeyGenerator = require("../utils/apikeygenerator")
