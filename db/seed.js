@@ -1,6 +1,6 @@
 const { Pool } = require('pg')
 var colors = require('./colors-list');
-const pool = new Pool({ database: 'colors_api', password: 'password' })
+const pool = new Pool(process.env.DATABASE_URL || { database: 'colors_api', password: 'password' })
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const apiKeyGenerator = require("../utils/apikeygenerator")
