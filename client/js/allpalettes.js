@@ -4,7 +4,8 @@ const subContainer = document.querySelector(".sub-container");
 const exportOptions = document.querySelectorAll(".export-container");
 const exportOptionsUl = document.querySelectorAll(".export-container-ul");
 const exportBtn = document.querySelectorAll(".export-img");
-const userid =  document.querySelector('#useridpalletspg')
+
+console.log("allpal")
 
 // exportBtn.addEventListener("click", (event) => {
 //   for (let i = 0; i < event.length; i++) {
@@ -24,10 +25,10 @@ for (let i = 0; i < exportBtn.length; i++) {
   });
 }
 
-const url = `/api/colors/palettes/favourites/${userid.dataset.userid}`;
+const url = `/api/palettes`;
 axios.get(url).then((res) => {
   console.log(res.data)
-  for (let i = 0; i < res.data.data.length; i++) {
+  for (let i = 0; i < 50; i++) {
     var mainDiv = document.createElement("div");
 
     mainDiv.classList.add("pallete-div");
